@@ -1,0 +1,12 @@
+<h2>Where we aren't getting along</h2>
+
+
+  <% @conflicts.each do |conflict| %>
+    <ul>
+
+      <li><%= link_to conflict.name, conflict_path(conflict.id) %></li>
+      <br>
+
+    </ul>
+
+  <% end %>

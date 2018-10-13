@@ -1,0 +1,13 @@
+<h2>Continents of the world</h2>
+
+<% @continents.each do |continent| %>
+
+  <ul>
+
+    <li><%= link_to continent.name, continent_path(continent.id) %></li>
+
+  </ul>
+
+
+
+<% end %>

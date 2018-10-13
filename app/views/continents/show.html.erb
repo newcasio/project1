@@ -1,0 +1,26 @@
+<h2>Continent: <%= @continent.name %></h2>
+
+<img src=<%= @continent.image %> alt=<%= @continent.name %>>
+<br>
+<br>
+
+<strong>Total land area:</strong> <%= @continent.area %>
+<br>
+<br>
+
+<strong>Polulation:</strong> <%= @continent.population %>
+<br>
+<br>
+
+<strong>Current conflicts:</strong>
+
+<ul>
+  <% @continent.conflicts.each do |con| %>
+    <li>
+      <%= link_to con.name, conflict_path(con.id) %>
+    </li>
+
+  <% end %>
+
+
+</ul>

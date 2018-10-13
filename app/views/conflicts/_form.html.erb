@@ -1,0 +1,27 @@
+
+<%= form_for @conflict do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :country %>
+<%= f.text_field :country %>
+<br>
+<%= f.label :conflict_type %>
+<%= f.text_field :conflict_type %>
+<br>
+<%= f.label :description %>
+<%= f.text_area :description %>
+<br>
+<%= f.label :parties %>
+<%= f.text_field :parties %>
+<br>
+<%= f.label :image %>
+<%= f.text_field :image %>
+
+<br>
+<br>
+<%= f.submit %>
+
+
+<% end %>

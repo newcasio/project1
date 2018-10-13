@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
+
+
+<!-- REFERENCES -->
+<!-- continent size, population, area from https://www.thoughtco.com/continents-ranked-by-size-and-population-4163436 -->
+<!-- continent images from whatarethe7continents.com -->
+<!-- conflict info from https://www.cfr.org/interactives/global-conflict-tracker#!/global-conflict-tracker -->
