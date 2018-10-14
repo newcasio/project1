@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_action :authorize_user, :except => [:index]
+
   def new
     @user = User.new
   end

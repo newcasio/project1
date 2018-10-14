@@ -10,6 +10,11 @@
   </head>
 
   <body>
+      <%= link_to "Sign up", new_user_path  %> |
+      <%= link_to "Sign in", login_path%> |
+      <%= link_to "Sign out", login_path, :method => :delete %>
+
+      <hr>
     <h1>Current Conflicts in the World</h1>
     <%= link_to "Continents", continents_path%>  ||
     <%= link_to "Conflicts", conflicts_path%>

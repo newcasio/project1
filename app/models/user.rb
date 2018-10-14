@@ -1,4 +1,4 @@
 class User < ApplicationRecord
   has_secure_password
-  has_many_and_belongs_to :conflicts
+  has_and_belongs_to_many :conflicts
 end

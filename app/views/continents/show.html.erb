@@ -1,5 +1,7 @@
 <h2>Continent: <%= @continent.name %></h2>
 
+<%= link_to "Update this continent", edit_continent_path(@continent.id) %><br><br>
+
 <img src=<%= @continent.image %> alt=<%= @continent.name %>>
 <br>
 <br>

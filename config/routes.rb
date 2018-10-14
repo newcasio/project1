@@ -1,26 +1,13 @@
 Rails.application.routes.draw do
-  get 'session/new'
-  get 'session/create'
-  get 'session/destroy'
-  get 'continents/index'
-  get 'continents/show'
-  get 'continents/edit'
-  get 'continents/update'
-  get 'conflicts/new'
-  get 'conflicts/create'
-  get 'conflicts/index'
-  get 'conflicts/show'
-  get 'conflicts/edit'
-  get 'conflicts/update'
-  get 'conflicts/destroy'
-  get 'users/new'
-  get 'users/create'
-  get 'users/index'
-  get 'users/show'
-  get 'users/edit'
-  get 'users/update'
-  get 'users/destroy'
+
+  get '/login' => 'session#new'  #sign in
+  post '/login' => 'session#create'  #route to which sign in form is posted
+  delete '/login' => 'session#destroy' #path users use to log out.
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root :to=>"conflicts#index"
 
   resources :users
 
