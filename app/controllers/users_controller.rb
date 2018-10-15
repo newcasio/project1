@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     if user.persisted?  #did the user get saved/created?
       session[:user_id]=user.id #log in the new user
       redirect_to user_path(user.id) #go to show page for this user
-      
+
 
     else
       #account not created, show error
@@ -39,6 +39,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
+
   end
 
   private
