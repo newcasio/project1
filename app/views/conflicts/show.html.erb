@@ -1,8 +1,16 @@
 <h2><%= @conflict.name %></h2>
 
+
+
 Continent: <%= link_to @conflict.continent.name, continent_path(@conflict.continent.id) %><br>
 Conflict type: <%= @conflict.conflict_type %><br>
 Parties involved: <%= @conflict.parties %><br>
 Description : <%= @conflict.description %><br>
 
 <%= image_tag @conflict.image, class: 'conflictImage' %>
+
+
+
+
+
+<%= link_to "Follow this conflict", conflict_follow_path(@conflict) %>

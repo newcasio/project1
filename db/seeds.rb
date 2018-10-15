@@ -8,9 +8,9 @@
 #
 User.destroy_all
 
-User.create name:'Brad', email: 'brad@brad', password: 'chicken'
-User.create name:'Bob', email: 'bob@bob', password: 'chicken'
-User.create name:'Ben', email: 'ben@ben', password: 'chicken'
+u1 = User.create name:'Brad', email: 'brad@brad', password: 'chicken'
+u2 = User.create name:'Bob', email: 'bob@bob', password: 'chicken'
+u3 = User.create name:'Ben', email: 'ben@ben', password: 'chicken'
 
 puts "Created #{User.all.length} users."
 
@@ -41,6 +41,9 @@ cf10 = Conflict.create name: 'Nagorno-Karabakh Conflict', country: 'Armenia', co
 
 puts "Created #{Conflict.all.length} conflicts."
 
+u1.conflicts << cf1 << cf3 << cf5 << cf7 << cf9
+u2.conflicts << cf2 << cf4 << cf6 << cf8 << cf10
+u3.conflicts << cf1 << cf2 << cf3 << cf4 << cf5
 
 
 

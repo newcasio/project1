@@ -1,4 +1,8 @@
 class ConflictsController < ApplicationController
+
+  before_action :check_if_logged_in, except: [:index, :show]
+
+
   def new
     @conflict = Conflict.new
   end
@@ -33,6 +37,21 @@ class ConflictsController < ApplicationController
     conflict.destroy
     redirect_to conflicts_path
   end
+
+  def follow
+    @current_conflict = Conflict.find(params[:id])  #find current conflict hash
+
+    if @current_user.conflicts.include?(@current_conflict)
+      conflict_name = @current_conflict.name
+      flash[:message] = "You are already following "+conflict_name+"."
+    else
+      @current_user.conflicts << @current_conflict
+    end
+
+
+    redirect_to user_path(@current_user.id)
+  end
+
 
   private
   def conflict_params

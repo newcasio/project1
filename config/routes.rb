@@ -13,5 +13,7 @@ Rails.application.routes.draw do
 
   resources :conflicts
 
+  get '/conflicts/:id/follow'=>'conflicts#follow', as: 'conflict_follow'
+
   resources :continents
 end

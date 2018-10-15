@@ -1,4 +1,4 @@
-
+<!--
 <%= form_for @conflict do |f| %>
 
 <%= f.label :name %>
@@ -23,5 +23,41 @@
 <br>
 <%= f.submit %>
 
+
+<% end %> -->
+
+
+
+<%= form_for @conflict do |f| %>
+
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :conflict_type %>
+    <%= f.text_field :conflict_type %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :parties %>
+    <%= f.text_field :parties %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :continent_id, 'Continent' %>
+    <%= f.collection_select :continent_id, Continent.all, :id, :name, prompt: 'Please choose a continent'  %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </fieldset>
+  <%= f.submit %>
 
 <% end %>

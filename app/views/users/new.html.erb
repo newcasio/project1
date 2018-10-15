@@ -1,3 +1,12 @@
 <h2>Add new user</h2>
 
+<% if flash[:errors].present? %>
+  <strong>Please correct the following errors:</strong>
+  <ul>
+  <% flash[:errors].each do |err| %>
+    <li><%= err %></li>
+  <% end %>
+</ul>
+<% end %>
+
 <%= render partial: 'form' %>

@@ -1,4 +1,14 @@
-<h2>User: <%= @user.name %></h2>
+<h2>Welcome <%= @user.name %></h2>
 
-Name: <%= @user.name %><br>
-email: <%= @user.email %>
+email: <%= @user.email %><br><br>
+
+<% if flash[:message].present? %>
+  <strong><%= flash[:message] %></strong>
+<% end %>
+<hr>
+Conflicts followed:<br>
+<% @user.conflicts.each do |conflict|%>
+
+  <%= link_to conflict.name, conflict_path(conflict.id) %><br>
+
+<%end  %>
