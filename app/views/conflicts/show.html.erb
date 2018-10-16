@@ -11,17 +11,23 @@ Description : <%=simple_format( @conflict.description) %><br>
 
 <%= link_to "Follow this conflict", conflict_follow_path(@conflict) %>
 <hr>
-Comments
+Comments<br>
 
-<ul>
+
   <% @conflict.comments.each do |comment| %>
-    <li><%= comment.comment %></li>
+    <%= comment.comment %><br>
+    <%= comment.user.name %>  <br>
+    <%= comment.created_at %>
+    <br><br>
 
   <% end %>
-</ul>
+<br>
+<br>
 
-<br>
-<br>
+<%if flash[:error].present? %>
+  <%= flash[:error] %>
+<% end  %>
+
 <%= form_tag comments_path do %>
   <%= label_tag :comment %>
   <%= text_area_tag :comment %>
