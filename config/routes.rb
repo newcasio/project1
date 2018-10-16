@@ -7,13 +7,13 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  # root :to=>"users#destroy"
+  root :to=>"static_pages#home"
 
   resources :users
 
   resources :conflicts
 
-  get '/conflicts/:id/follow'=>'conflicts#follow', as: 'conflict_follow'
+  get '/conflicts/:id/follow'=>'conflicts#follow', as: 'conflict_follow'  #route for user to follow individual conflict
 
   resources :continents
 end
