@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def get_current_conflict
+    @conflict_looking_at = Conflict.find params[:id]
+  end
+
   def check_if_logged_in
     unless @current_user.present?
       flash[:error] = "You must be logged in to access that page."

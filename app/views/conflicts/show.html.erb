@@ -10,3 +10,22 @@ Description : <%=simple_format( @conflict.description) %><br>
 <%= cl_image_tag @conflict.image, class: 'conflictImage' %>
 
 <%= link_to "Follow this conflict", conflict_follow_path(@conflict) %>
+
+Comments
+
+<ul>
+  <% @conflict.comments.each do |comment| %>
+    <li><% comment.comment %></li>
+
+  <% end %>
+</ul>
+
+<br>
+<br>
+<%= form_tag comments_path do %>
+  <%= label_tag :comment %>
+  <%= text_field_tag :comment %>
+  <%= hidden_field_tag :conflict_id, "#{@conflict.id}" %>
+<br>
+<%= submit_tag "Submit" %>
+<% end %>

@@ -31,17 +31,3 @@ Things you may want to cover:
 <!-- continent size, population, area from https://www.thoughtco.com/continents-ranked-by-size-and-population-4163436 -->
 <!-- continent images from whatarethe7continents.com -->
 <!-- conflict info from https://www.cfr.org/interactives/global-conflict-tracker#!/global-conflict-tracker -->
-
-
-
-
-<!-- Comment.destroy_all
-
-com1 = Comment.create comment: 'It is good'
-com2 = Comment.create comment: 'I am better'
-
-u1.comments << com1
-u2.comments << com2
-
-cf6.comments << com1
-cf3.comments << com2 -->
