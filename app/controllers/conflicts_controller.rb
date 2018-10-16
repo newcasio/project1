@@ -1,7 +1,7 @@
 class ConflictsController < ApplicationController
 
   before_action :check_if_logged_in, except: [:index, :show]
-  
+
 
   def new
     @conflict = Conflict.new
@@ -62,7 +62,7 @@ class ConflictsController < ApplicationController
 
   private
   def conflict_params
-    params.require(:conflict).permit(:name, :country, :conflict_type, :description, :parties, :image)
+    params.require(:conflict).permit(:name, :country, :conflict_type, :description, :parties, :image, :continent_id)
 
 
   end
