@@ -104,6 +104,7 @@ Comment.destroy_all
 com1 = Comment.create comment: 'Shampoo is better! I go on first and clean the hair!'
 com2 = Comment.create comment: 'Conditioner is better! I leave the hair silky and smooth!'
 
+puts "Created #{Comment.all.length} comments."
 u1.comments << com1
 u2.comments << com2
 

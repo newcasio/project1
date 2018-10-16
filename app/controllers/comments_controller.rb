@@ -8,6 +8,8 @@ class CommentsController < ApplicationController
 
   def create
     @current_comment = Comment.create comment:params[:comment]
+    puts "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+    puts @current_comment.comment
     @current_comment.user_id = @current_user.id
     @current_comment.save
 

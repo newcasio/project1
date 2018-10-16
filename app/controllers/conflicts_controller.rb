@@ -1,7 +1,7 @@
 class ConflictsController < ApplicationController
 
   before_action :check_if_logged_in, except: [:index, :show]
-  before_action :get_current_conflict
+  
 
   def new
     @conflict = Conflict.new
