@@ -97,3 +97,15 @@ ct1.conflicts << cf5 << cf6 << cf7
 ct2.conflicts << cf4 << cf10
 ct3.conflicts << cf2 << cf3 << cf8 <<cf9
 ct5.conflicts << cf1
+
+
+Comment.destroy_all
+
+com1 = Comment.create comment: 'It is good'
+com2 = Comment.create comment: 'I am better'
+
+u1.comments << com1
+u2.comments << com2
+
+cf6.comments << com1
+cf3.comments << com2

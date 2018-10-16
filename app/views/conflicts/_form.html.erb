@@ -28,7 +28,7 @@
 
 
 
-<%= form_for @conflict do |f| %>
+<%= form_for @conflict, html: {multipart: true} do |f| %>   <!--html part for cloudinary -->
 
   <fieldset>
     <%= f.label :name %>
@@ -56,7 +56,7 @@
   </fieldset>
   <fieldset>
     <%= f.label :image %>
-    <%= f.text_field :image %>
+    <%= f.cl_image_upload :image %>            <!--cloudinary change -->
   </fieldset>
   <%= f.submit %>
 
