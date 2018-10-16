@@ -62,6 +62,8 @@ gem 'pry-byebug'
 
 gem 'jquery-rails'
 
-gem 'commontator', '~> 5.1.0'
+# gem 'commontator', '~> 5.1.0'
 
 gem 'cloudinary'
+
+gem 'bootstrap', '~> 4.1.3'

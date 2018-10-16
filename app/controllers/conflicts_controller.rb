@@ -8,6 +8,7 @@ class ConflictsController < ApplicationController
   end
 
   def create
+    # Conflict.create conflict_params
     @conflict = Conflict.new(conflict_params)
     # cloundinary upload happens here
     if params[:file].present?
@@ -15,7 +16,6 @@ class ConflictsController < ApplicationController
       @conflict.image = response["public_id"]
     end
     @conflict.save
-    # Conflict.create conflict_params
     redirect_to conflicts_path
   end
 

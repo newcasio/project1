@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   get '/conflicts/:id/follow'=>'conflicts#follow', as: 'conflict_follow'  #route for user to follow individual conflict
 
   resources :continents
+
+  # mount Commontator::Engine => '/commontator'   #comments gem
+
 end
