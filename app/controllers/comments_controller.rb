@@ -58,7 +58,12 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find params[:id]
     puts "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-    puts @comment.id
+    unless @comment.user == @current_user
+      puts ")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))"
+      flash[:error] = "You must be the owner of this comment to delete."
+      redirect_to conflict_path(@comment.conflict_id)
+      return
+    end
     @comment.destroy
     redirect_to conflict_path(@comment.conflict_id)
   end
