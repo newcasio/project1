@@ -15,12 +15,25 @@
 
  */
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
 
 
 body{
   background-color: grey;
+  padding: 30px 60px;
 }
 
-.padder{
-  margin: 20;  
+.logout{
+  position: absolute;
+  right: 60px;
+  margin-top: -7px;
+}
+
+h1{
+  font-family: 'Patua One', cursive;
+}
+
+h5{
+  font-family: 'Patua One', cursive;
+
 }

@@ -13,12 +13,12 @@
   <body>
     <nav>
     <% if @current_user.present? %>
-      Welcome, <%= @current_user.name %>
-      <%= link_to 'Logout', login_path, method: 'delete' %>
+      You are logged in as <%= @current_user.name %>
+      <%= link_to 'Logout', login_path, method: 'delete', class:'logout btn btn-outline-dark' %>
 
     <% else %>
-      <%= link_to 'Login', login_path %>
-      <%= link_to 'Sign up', new_user_path %>
+      <%= link_to 'Login', login_path, class: "btn btn-outline-dark" %>
+      <%= link_to 'Sign up', new_user_path, class: "btn btn-outline-dark" %>
 
     <% end %>
 
@@ -26,7 +26,10 @@
 
 
       <hr>
-    <h1 class="display-1 text-center">Current Conflicts in the World</h1>
+    <h1 class="display-1 text-center">Ongoing Conflicts</h1>
+    <h1 class="display-1 text-center">In Our World</h1>
+    <br>
+    <h5 class="display-5 text-center">Can't we all just get along?</h3>
     <%= link_to "Continents", continents_path%>  ||
     <%= link_to "Conflicts", conflicts_path%>
     <%= yield %>
