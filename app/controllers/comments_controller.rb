@@ -27,6 +27,7 @@ class CommentsController < ApplicationController
       @conflict = Conflict.find params[:conflict_id].to_i
       flash[:error] = 'Comments field cannot be empty.'
       puts flash[:error]
+
       redirect_to conflict_path(@conflict.id)
     end
   end
@@ -38,11 +39,27 @@ class CommentsController < ApplicationController
   end
 
   def edit
+    @comment = Comment.find params[:id]
+    unless @comment.user == @current_user
+      puts ")))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))"
+      flash[:error] = "You must be the owner of this comment to edit."
+      redirect_to conflict_path(@comment.conflict_id)
+    end
+
   end
 
   def update
+    @comment = Comment.find params[:id]
+    @comment.update comment:params[:comment][:comment ]
+    redirect_to conflict_path(@comment.conflict_id)
+
   end
 
   def destroy
+    @comment = Comment.find params[:id]
+    puts "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+    puts @comment.id
+    @comment.destroy
+    redirect_to conflict_path(@comment.conflict_id)
   end
 end

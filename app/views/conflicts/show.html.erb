@@ -17,16 +17,18 @@ Comments<br>
   <% @conflict.comments.each do |comment| %>
     <%= comment.comment %><br>
     <%= comment.user.name %>  <br>
-    <%= comment.created_at %>
+    <%= comment.updated_at %><br>
+    <%= link_to "Edit comment", edit_comment_path(comment.id)  %> ||
+    <%= link_to "Delete comment", comment_path(comment.id), method: 'delete' %>
     <br><br>
 
   <% end %>
 <br>
 <br>
 
-<%if flash[:error].present? %>
+<% if flash[:error].present? %>
   <%= flash[:error] %>
-<% end  %>
+<% end %>
 
 <%= form_tag comments_path do %>
   <%= label_tag :comment %>
