@@ -1,33 +1,38 @@
-# Tic-Tac-Toe Game
+# Project 1: Current Conflicts in the World
 
 ### Link
-https://newcasio.github.io/tic-tac-toe/
+https://conflicts.herokuapp.com/
 
 ## Description
 
-Project 0 of WDI 29.
+Project 1 of WDI 29.
 
-A simple, but amusing take on the classic Tic-Tac-Toe or Noughts & Crosses game, using a combination of HTML, CSS, vanilla Javascript and JQuery.
+Although its pretty peaceful here in Australia, there are still many conflicts going on around the world.  See where fighting is still going on, and why?
 
-* Minutes of fun!!!
+Using a Ruby on Rails and Bootstrap, this is a simple database representing selected conflicts around the world.  Using the Google Maps API, a world map is generated with corresponding conflict markers.
 
-* Cool animations
+* Uses Google map API.
 
-* Annoying sounds
+![scoreboard](/images/conflicts_index.png)
+
+![gameboard](/images/continents_index.png)
 
 
-![scoreboard](/images/scoreboard.png)
-
-![gameboard](/images/board.png)
-
-![winWindow](/images/winScreen.png)
 
 
 ### Issues
 
-Animations not precise.
+CSS/Bootstrap not being applied to static home page.
+
+All users can delete conflicts.  Possibly require a user_id field in conflicts table to only allow the creator to delete a conflict.
+
+When creating a new conflict, Cloudinary mutates path so not usable by infoWindow on conflicts_index page.  Image does show on conflict_show page.
+
+When create a new conflict, user enters latitude, longitude and continent.  Even if these parameters do not correspond, conflict still created.  Possibly remove continents field, auto populate using coordinates.
+
+CSS unfinished.
 
 
 ### Credits
 
-Big credits to Luke and Linna for code help, Jonno for finding the Ryu gif.
+Big credits to Luke and Linna for code help.
