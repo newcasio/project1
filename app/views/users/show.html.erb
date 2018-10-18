@@ -7,20 +7,20 @@ email: <%= @user.email %><br><br>
 <% end %>
 <hr>
 Conflicts followed:<br>
+<div class='container'>
 
-<% @user.conflicts.each do |conflict|%>
-
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src=<%= conflict.image %> alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title"><%= conflict.name %></h5>
-    <p class="card-text clearfix hidden-md-down"><%= conflict.text %></p>
-    <%= link_to "See conflict", conflict_path(conflict.id), class: "btn btn-primary" %><br>
+  <% @user.conflicts.each do |conflict|%>
+  <div class= "row">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=<%= conflict.image %> alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%= conflict.name %></h5>
+          <p class="card-text text-truncate"><%= conflict.description %></p>
+          <%= link_to "See conflict", conflict_path(conflict.id), class: "btn btn-primary" %><br>
+        </div>
+      </div>
+    </div>
   </div>
+  <%end  %>
 </div>
-
-
-
-
-
-<%end  %>
