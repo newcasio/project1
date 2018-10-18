@@ -13,9 +13,12 @@ Using a Ruby on Rails and Bootstrap, this is a simple database representing sele
 
 * Uses Google map API.
 
-![scoreboard](/images/conflicts_index.png)
 
-![gameboard](/images/continents_index.png)
+Listed Conflicts:
+![all conflicts](/images/conflicts_index.png)
+
+Continents page:
+![all continents](/images/continents_index.png)
 
 
 
