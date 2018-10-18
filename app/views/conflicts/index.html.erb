@@ -46,11 +46,8 @@ function initMap() {
 
   };  //end for loop
 
-
-
-
-
   map.fitBounds(bounds);
+  map.setZoom(3);
 
 
 }; // initMap()
@@ -64,3 +61,6 @@ function initMap() {
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfdeYzd23jyR3fKx0oRtdlqCDK-NEzwcI&callback=initMap">
   </script>
+  <!-- <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=#{Rails.application.secrets.google_api_key}&callback=initMap">
+  </script> -->

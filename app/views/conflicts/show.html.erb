@@ -10,6 +10,7 @@ Description : <%=simple_format( @conflict.description) %><br>
 <%= cl_image_tag @conflict.image, class: 'conflictImage' %>
 
 <%= link_to "Follow this conflict", conflict_follow_path(@conflict) %>
+<%= link_to "Delete this conflict", conflict_path(@conflict.id), method: 'delete' %>
 <hr>
 Comments<br>
 

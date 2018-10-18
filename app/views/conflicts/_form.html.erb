@@ -56,22 +56,16 @@
   </fieldset>
   <fieldset>
     <%= f.label :longitude %>
-    <%= f.text_field :lng %>
+    <%= f.text_field :lng%>
   </fieldset>
   <fieldset>
     <%= f.label :continent_id, 'Continent' %>
     <%= f.collection_select :continent_id, Continent.all, :id, :name, prompt: 'Please choose a continent'  %>
   </fieldset>
 
-
-
-
-
-
-
   <fieldset>
-    <%= f.label :image %>
-    <%= f.cl_image_upload :image %>            <!--cloudinary change -->
+    <%= f.label :image, 'Image URL' %>
+    <%= f.text_field :image %>            <!--cloudinary change -->
   </fieldset>
   <%= f.submit %>
 

@@ -1,0 +1,4 @@
+development:
+  google_api_key: Rails.application.secrets.google_api_key
+  enhance_image_tag: true
+  static_image_support: false

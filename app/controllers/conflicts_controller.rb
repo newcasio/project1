@@ -45,6 +45,7 @@ class ConflictsController < ApplicationController
     redirect_to conflicts_path
   end
 
+
   def follow
     @current_conflict = Conflict.find(params[:id])  #find current conflict hash
 
@@ -62,7 +63,7 @@ class ConflictsController < ApplicationController
 
   private
   def conflict_params
-    params.require(:conflict).permit(:name, :country, :conflict_type, :description, :parties, :image, :continent_id)
+    params.require(:conflict).permit(:name, :country, :conflict_type, :description, :parties, :image, :continent_id, :lat, :lng)
 
 
   end

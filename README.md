@@ -1,58 +1,33 @@
-# README
+# Tic-Tac-Toe Game
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Link
+https://newcasio.github.io/tic-tac-toe/
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+Project 0 of WDI 29.
 
-* System dependencies
+A simple, but amusing take on the classic Tic-Tac-Toe or Noughts & Crosses game, using a combination of HTML, CSS, vanilla Javascript and JQuery.
 
-* Configuration
+* Minutes of fun!!!
 
-* Database creation
+* Cool animations
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Annoying sounds
 
 
+![scoreboard](/images/scoreboard.png)
+
+![gameboard](/images/board.png)
+
+![winWindow](/images/winScreen.png)
 
 
+### Issues
 
-<!-- REFERENCES -->
-<!-- continent size, population, area from https://www.thoughtco.com/continents-ranked-by-size-and-population-4163436 -->
-<!-- continent images from whatarethe7continents.com -->
-<!-- conflict info from https://www.cfr.org/interactives/global-conflict-tracker#!/global-conflict-tracker -->
+Animations not precise.
 
 
-<!-- <script type="text/javascript">
-handler = Gmaps.build('Google');
-handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-  markers = handler.addMarkers([
-    {
-      "lat": 37.3333945,
-      "lng": -121.8806499,
-      "picture": {
-        "width":  32,
-        "height": 32
-      },
-      "infowindow": "SJSU"
-    }
-  ]);
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
-});
-</script> -->
+### Credits
 
-
-<!-- <div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div> -->
+Big credits to Luke and Linna for code help, Jonno for finding the Ryu gif.
