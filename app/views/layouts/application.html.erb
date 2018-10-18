@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application' %>
     <%= cloudinary_js_config %>
 
-    
+
     <script src='//underscorejs.org/underscore-min.js' type='text/javascript'></script>
 
 
@@ -34,8 +34,10 @@
     <h1 class="display-1 text-center">Ongoing Conflicts In Our World</h1>
     <br>
     <h5 class="display-5 text-center">Can't we all just get along?</h3>
-    <%= link_to "See All Continents", continents_path, class: 'btn btn-outline-danger'%>
-    <%= link_to "See All Conflicts", conflicts_path, class: 'btn btn-outline-danger'%>
+    <div class="centre">
+      <%= link_to "See All Continents", continents_path, class: 'btn btn-outline-danger'%>
+      <%= link_to "See All Conflicts", conflicts_path, class: 'btn btn-outline-danger'%>
+    </div>
     <%= yield %>
   </body>
 </html>
