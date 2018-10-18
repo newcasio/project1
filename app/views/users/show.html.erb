@@ -9,10 +9,10 @@ email: <%= @user.email %><br><br>
 Conflicts followed:<br>
 <div class='container'>
 
+  <div class='row'>
   <% @user.conflicts.each do |conflict|%>
-  <div class= "row">
-    <div class="col">
-      <div class="card" style="width: 18rem;">
+
+      <div class="card " style="width: 18rem;">
         <img class="card-img-top" src=<%= conflict.image %> alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title"><%= conflict.name %></h5>
@@ -20,7 +20,7 @@ Conflicts followed:<br>
           <%= link_to "See conflict", conflict_path(conflict.id), class: "btn btn-primary" %><br>
         </div>
       </div>
-    </div>
-  </div>
+
   <%end  %>
+  </div>
 </div>

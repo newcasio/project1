@@ -69,3 +69,7 @@ gem 'cloudinary'
 gem 'bootstrap', '~> 4.1.3'
 
 gem 'rails_12factor'
+
+gem 'gmaps4rails'
+
+gem 'underscore-rails'

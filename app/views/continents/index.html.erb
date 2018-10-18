@@ -1,13 +1,21 @@
 <h2>Continents of the world</h2>
 
-<% @continents.each do |continent| %>
-
-  <ul>
-
-    <li><%= link_to continent.name, continent_path(continent.id) %></li>
-
-  </ul>
 
 
 
-<% end %>
+<div class='container'>
+
+  <div class='row'>
+  <% @continents.each do |continent|%>
+
+      <div class="card " style="width: 18rem;">
+        <img class="card-img-top" src=<%= continent.image %> alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%= continent.name %></h5>
+          <%= link_to "See continent", continent_path(continent.id), class: "btn btn-primary" %><br>
+        </div>
+      </div>
+
+  <%end  %>
+  </div>
+</div>

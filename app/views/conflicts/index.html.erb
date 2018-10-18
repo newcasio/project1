@@ -1,16 +1,50 @@
 <h2 class='display-5'>Where we aren't getting along</h2>
 
 
+  <div>
 
-  <%= link_to "New conflict?  Add here", new_conflict_path %>
+    <%= link_to "New conflict?  Add here", new_conflict_path, class: 'btn btn-warning' %>
+  </div>
+
+  <div style='width: 800px;'>
+    <div id="map" style='width: 800px; height: 400px;'></div>
+  </div>
 
 
-  <% @conflicts.each do |conflict| %>
-    <ul>
+  <script type="text/javascript">
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers([
+      {
+        "lat": 37.3333945,
+        "lng": -121.8806499,
+        "picture": {
+          "width":  32,
+          "height": 32
+        },
+        "infowindow": "SJSU"
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+  </script>
 
-      <li><%= link_to conflict.name, conflict_path(conflict.id) %></li>
-      <br>
+  <div class='container'>
 
-    </ul>
+    <div class='row'>
+    <% @conflicts.each do |conflict|%>
 
-  <% end %>
+        <div class="card " style="width: 18rem;">
+          <img class="card-img-top" src=<%= conflict.image %> alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><%= conflict.name %></h5>
+            <p class="card-text text-truncate"><%= conflict.description %></p>
+
+            <%= link_to "See conflict", conflict_path(conflict.id), class: "btn btn-primary" %><br>
+          </div>
+        </div>
+
+    <%end  %>
+    </div>
+  </div>
