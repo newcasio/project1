@@ -23,33 +23,21 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById('map'));  //create new map, place map
   // The marker, positioned at Uluru
   // var marker = new google.maps.Marker({position: uluru, map: map});
-  var infoWindow = new google.maps.InfoWindow({maxWidth:320});
-
   for( let i =0; i<locations.length; i++){
     var m = new google.maps.Marker({
       position: {
         lat: locations[i][0],
         lng: locations[i][1]
-
       },
       map: map,
-      content: `<div>${locations[i][3]}</div><img class='windowImg' src=${locations[i][4]}><a href="/conflicts/${locations[i][2]}">Go to conflict</a>`,
       url: `/conflicts/${locations[i][2]}`
     });
-
     bounds.extend(m.getPosition());  //boundary box stretches by each marker's (m) position
+
     google.maps.event.addListener(m, 'click', function() {
-      infoWindow.setContent(this.content);
-      infoWindow.open(this.getMap(), this);
-
-    });
-
+        window.location.href = this.url;  //onclick, link to current marker's url
+    });  //end event listener
   };  //end for loop
-
-
-
-
-
   map.fitBounds(bounds);
 
 

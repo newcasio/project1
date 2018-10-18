@@ -51,6 +51,14 @@
     <%= f.text_field :parties %>
   </fieldset>
   <fieldset>
+    <%= f.label :latitude %>
+    <%= f.text_field :lat %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :longitude %>
+    <%= f.text_field :lng %>
+  </fieldset>
+  <fieldset>
     <%= f.label :continent_id, 'Continent' %>
     <%= f.collection_select :continent_id, Continent.all, :id, :name, prompt: 'Please choose a continent'  %>
   </fieldset>
