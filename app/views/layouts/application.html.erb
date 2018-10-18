@@ -9,8 +9,7 @@
     <%= javascript_include_tag 'application' %>
     <%= cloudinary_js_config %>
 
-    <!-- <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
-    <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> -->
+    
     <script src='//underscorejs.org/underscore-min.js' type='text/javascript'></script>
 
 
@@ -19,7 +18,7 @@
   <body>
     <nav>
     <% if @current_user.present? %>
-      You are logged in as <%= @current_user.name %>
+      You are logged in as <%= link_to @current_user.name, user_path(@current_user.id) %>
       <%= link_to 'Logout', login_path, method: 'delete', class:'logout btn btn-outline-dark' %>
 
     <% else %>

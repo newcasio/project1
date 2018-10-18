@@ -11,6 +11,8 @@ Although its pretty peaceful here in Australia, there are still many conflicts g
 
 Using a Ruby on Rails and Bootstrap, this is a simple database representing selected conflicts around the world.  Using the Google Maps API, a world map is generated with corresponding conflict markers.
 
+* Gems used Cloudinary, Bootstrap, gmaps4rails.
+
 * Uses Google map API.
 
 
@@ -31,7 +33,7 @@ All users can delete conflicts.  Possibly require a user_id field in conflicts t
 
 When creating a new conflict, Cloudinary mutates path so not usable by infoWindow on conflicts_index page.  Image does show on conflict_show page.
 
-When create a new conflict, user enters latitude, longitude and continent.  Even if these parameters do not correspond, conflict still created.  Possibly remove continents field, auto populate using coordinates.
+When creating a new conflict, user enters latitude, longitude and continent.  Even if these parameters do not correspond, conflict still created.  Possibly remove continents field, auto populate using coordinates.
 
 CSS unfinished.
 
