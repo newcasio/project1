@@ -34,7 +34,7 @@ class ConflictsController < ApplicationController
 
   def update
     conflict = Conflict.find(params[:id])
-    conflict.update conflict_params
+    conflict.update conflict_params  #update using partial conflict_params
     redirect_to conflict_path(conflict.id)
 
   end
@@ -49,22 +49,17 @@ class ConflictsController < ApplicationController
   def follow
     @current_conflict = Conflict.find(params[:id])  #find current conflict hash
 
-    if @current_user.conflicts.include?(@current_conflict)
+    if @current_user.conflicts.include?(@current_conflict)  #check if user already has conflict
       conflict_name = @current_conflict.name
       flash[:message] = "You are already following "+conflict_name+"."
     else
       @current_user.conflicts << @current_conflict
     end
-
-
     redirect_to user_path(@current_user.id)
   end
 
-
   private
   def conflict_params
-    params.require(:conflict).permit(:name, :country, :conflict_type, :description, :parties, :image, :continent_id, :lat, :lng)
-
-
+    params.require(:conflict).permit(:name, :country, :conflict_type, :description, :parties, :image, :continent_id, :lat, :lng)  #permission to enter and update these fields
   end
 end

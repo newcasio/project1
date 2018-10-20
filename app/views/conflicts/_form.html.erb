@@ -1,33 +1,3 @@
-<!--
-<%= form_for @conflict do |f| %>
-
-<%= f.label :name %>
-<%= f.text_field :name %>
-<br>
-<%= f.label :country %>
-<%= f.text_field :country %>
-<br>
-<%= f.label :conflict_type %>
-<%= f.text_field :conflict_type %>
-<br>
-<%= f.label :description %>
-<%= f.text_area :description %>
-<br>
-<%= f.label :parties %>
-<%= f.text_field :parties %>
-<br>
-<%= f.label :image %>
-<%= f.text_field :image %>
-
-<br>
-<br>
-<%= f.submit %>
-
-
-<% end %> -->
-
-
-
 <%= form_for @conflict, html: {multipart: true} do |f| %>   <!--html part for cloudinary -->
 
   <fieldset>
@@ -59,7 +29,7 @@
     <%= f.text_field :lng%>
   </fieldset>
   <fieldset>
-    <%= f.label :continent_id, 'Continent' %>
+    <%= f.label :continent_id, 'Continent' %>  <!--drop down selection-->
     <%= f.collection_select :continent_id, Continent.all, :id, :name, prompt: 'Please choose a continent'  %>
   </fieldset>
 

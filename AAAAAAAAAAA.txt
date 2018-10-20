@@ -1,0 +1,46 @@
+`rails g model User name:text email:text password_digest:text`
+`rails g model Conflict name:text country:text type:text description:text parties:text image:text continent_id:integer`
+`rails g model Continent name:text area:text population:text image:text`
+
+Brad Dong [9:05 PM]
+`rails g migration create_conflicts_users conflict_id:integer user_id:integer`
+`rails db:create`
+`rails db:migrate`
+
+Brad Dong [6:47 AM]
+`rails g migration ChangeColumnName`
+
+Brad Dong [7:02 AM]
+`rake db:migrate`
+
+Brad Dong [9:20 AM]
+`rails g controller users new create index show edit update destroy`
+`rails g controller conflicts new create index show edit update destroy`
+`rails g controller continents index show edit update`
+
+Brad Dong [2:48 PM]
+`rails g migration create_conflicts_users conflict_id:integer user_id:integer`
+`rails g controller session new create destroy`
+
+Brad Dong [12:32 PM]
+`rm app/views/session/destroy.html.erb`
+`rm app/views/session/create.html.erb`
+
+Brad Dong [9:14 PM]
+:giphy community
+
+Brad Dong [5:18 PM]
+`rails g controller static_pages`
+
+Brad Dong [11:25 AM]
+`rails g model Comment comment:text`
+
+Brad Dong [12:06 PM]
+`bundle` (edited)
+
+`rails g migration add_lat_to_conflicts lat:float`
+`rails g migration add_lng_to_conflicts lng:float`
+`rails db:migrate`
+
+Brad Dong [11:52 AM]
+`rails db:seed`
